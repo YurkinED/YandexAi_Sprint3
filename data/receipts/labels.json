@@ -1,0 +1,122 @@
+[
+  {
+    "file": "receipt_A-1041.png",
+    "receipt_number": "A-1041",
+    "shop": "Электро-Сити",
+    "order_id": 4108,
+    "amount": 7990,
+    "date": "12.08.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1042.png",
+    "receipt_number": "A-1042",
+    "shop": "Дом и Сад",
+    "order_id": 4112,
+    "amount": 3990,
+    "date": "15.08.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1043.png",
+    "receipt_number": "A-1043",
+    "shop": "Спортлайн",
+    "order_id": 4117,
+    "amount": 11990,
+    "date": "20.08.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1044.png",
+    "receipt_number": "A-1044",
+    "shop": "КнигаМаркет",
+    "order_id": 4121,
+    "amount": 2490,
+    "date": "22.08.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1045.png",
+    "receipt_number": "A-1045",
+    "shop": "Мода-Плюс",
+    "order_id": 4126,
+    "amount": 5490,
+    "date": "27.08.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1046.png",
+    "receipt_number": "A-1046",
+    "shop": "ТехноДвор",
+    "order_id": 4131,
+    "amount": 24990,
+    "date": "01.09.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1047.png",
+    "receipt_number": "A-1047",
+    "shop": "Электро-Сити",
+    "order_id": 4136,
+    "amount": 15990,
+    "date": "03.09.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1048.png",
+    "receipt_number": "A-1048",
+    "shop": "Дом и Сад",
+    "order_id": 4141,
+    "amount": 3990,
+    "date": "05.09.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1049.png",
+    "receipt_number": "A-1049",
+    "shop": "Спортлайн",
+    "order_id": 4146,
+    "amount": 7990,
+    "date": "08.09.2026",
+    "needs_manual_review": false,
+    "defect": null
+  },
+  {
+    "file": "receipt_A-1050.png",
+    "receipt_number": "A-1050",
+    "shop": "КнигаМаркет",
+    "order_id": 4151,
+    "amount": null,
+    "date": "10.09.2026",
+    "needs_manual_review": true,
+    "defect": "cropped"
+  },
+  {
+    "file": "receipt_A-1051.png",
+    "receipt_number": "A-1051",
+    "shop": "Мода-Плюс",
+    "order_id": 4156,
+    "amount": null,
+    "date": "11.09.2026",
+    "needs_manual_review": true,
+    "defect": "no_amount"
+  },
+  {
+    "file": "receipt_A-1052.png",
+    "receipt_number": "A-1052",
+    "shop": "ТехноДвор",
+    "order_id": 4159,
+    "amount": 11990,
+    "date": "12.09.2026",
+    "needs_manual_review": true,
+    "defect": "blurred"
+  }
+]

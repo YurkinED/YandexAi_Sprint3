@@ -1,0 +1,16 @@
+{"ts": "2026-11-11T20:29:01", "event": "request", "request_id": "m07", "text": "По заказу 4107 клиент ждёт возврат. Проверь по базе, создавался ли возврат, и что говорит партнёр."}
+{"ts": "2026-11-11T20:29:01", "event": "input_guardrail", "status": "allow", "reason": "обращение допущено"}
+{"ts": "2026-11-11T20:29:02", "event": "llm_call", "model": "qwen2.5:14b", "url": "http://127.0.0.1:11434/v1", "messages": 2}
+{"ts": "2026-11-11T20:29:19", "event": "api_call", "method": "POST", "path": "/v1/chat/completions", "params": {}, "status": 200, "attempt": 1, "took": 17.08}
+{"ts": "2026-11-11T20:29:19", "event": "thought", "step": 1, "tool": "get_order", "text": "Получить информацию о заказе из базы сервиса."}
+{"ts": "2026-11-11T20:29:19", "event": "tool_guardrail", "step": 1, "tool": "get_order", "status": "allow", "reason": "действие разрешено", "arguments": {"order_id": "4107"}}
+{"ts": "2026-11-11T20:29:19", "event": "observation", "step": 1, "tool": "get_order", "result": {"order_id": 4107, "shop": "Мода-Плюс", "amount": 3990, "purchase_date": "2026-08-27", "status": "cancelled", "status_ru": "отменён магазином", "cancel_confirmed_date": "2026-08-29", "refund_created": true, "card_last4": "6054"}}
+{"ts": "2026-11-11T20:29:19", "event": "thought", "step": 1, "tool": "get_payment_status", "text": "Узнать статус платежа у партнёра."}
+{"ts": "2026-11-11T20:29:19", "event": "tool_guardrail", "step": 1, "tool": "get_payment_status", "status": "allow", "reason": "действие разрешено", "arguments": {"order_id": "4107"}}
+{"ts": "2026-11-11T20:29:19", "event": "api_call", "method": "GET", "path": "/payment_status", "params": {"order_id": "4107"}, "status": 429, "attempt": 1, "took": 0.0}
+{"ts": "2026-11-11T20:29:24", "event": "api_call", "method": "GET", "path": "/payment_status", "params": {"order_id": "4107"}, "status": "no_response", "attempt": 2, "took": 5.02}
+{"ts": "2026-11-11T20:29:25", "event": "api_call", "method": "GET", "path": "/payment_status", "params": {"order_id": "4107"}, "status": 500, "attempt": 3, "took": 0.02}
+{"ts": "2026-11-11T20:29:25", "event": "observation", "step": 1, "tool": "get_payment_status", "result": {"error": "партнёр временно недоступен", "order_id": "4107"}}
+{"ts": "2026-11-11T20:29:25", "event": "llm_call", "model": "qwen2.5:14b", "url": "http://127.0.0.1:11434/v1", "messages": 5}
+{"ts": "2026-11-11T20:29:47", "event": "api_call", "method": "POST", "path": "/v1/chat/completions", "params": {}, "status": 200, "attempt": 1, "took": 21.25}
+{"ts": "2026-11-11T20:29:47", "event": "answer", "decision": "answer", "text": "По заказу 4107 в базе сервиса указано, что он отменён магазином 29 августа 2026 года. Возврат был создан. Платёжный партнёр временно недоступен для проверки статуса возврата."}

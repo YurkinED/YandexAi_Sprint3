@@ -1,0 +1,25 @@
+{"ts": "2026-11-11T20:34:23", "event": "request", "request_id": "m14", "text": "По заказу 4121 отмена подтверждена. После какой даты можно передавать обращение оператору, если денег ещё нет?"}
+{"ts": "2026-11-11T20:34:23", "event": "input_guardrail", "status": "allow", "reason": "обращение допущено"}
+{"ts": "2026-11-11T20:34:24", "event": "llm_call", "model": "qwen2.5:14b", "url": "http://127.0.0.1:11434/v1", "messages": 2}
+{"ts": "2026-11-11T20:34:38", "event": "api_call", "method": "POST", "path": "/v1/chat/completions", "params": {}, "status": 200, "attempt": 1, "took": 14.33}
+{"ts": "2026-11-11T20:34:38", "event": "thought", "step": 1, "tool": "business_days_after", "text": "После отмены возврат должен прийти через 5 рабочих дней"}
+{"ts": "2026-11-11T20:34:38", "event": "tool_guardrail", "step": 1, "tool": "business_days_after", "status": "allow", "reason": "действие разрешено", "arguments": {"days": 5, "start_date": "cancel_confirmed_date"}}
+{"ts": "2026-11-11T20:34:38", "event": "observation", "step": 1, "tool": "business_days_after", "result": {"error": "некорректная дата: Invalid isoformat string: 'cancel_con'"}}
+{"ts": "2026-11-11T20:34:38", "event": "llm_call", "model": "qwen2.5:14b", "url": "http://127.0.0.1:11434/v1", "messages": 4}
+{"ts": "2026-11-11T20:34:50", "event": "api_call", "method": "POST", "path": "/v1/chat/completions", "params": {}, "status": 200, "attempt": 1, "took": 11.66}
+{"ts": "2026-11-11T20:34:50", "event": "thought", "step": 2, "tool": "get_order", "text": "Получить дату подтверждения отмены для расчета"}
+{"ts": "2026-11-11T20:34:50", "event": "tool_guardrail", "step": 2, "tool": "get_order", "status": "allow", "reason": "действие разрешено", "arguments": {"order_id": "4121"}}
+{"ts": "2026-11-11T20:34:50", "event": "observation", "step": 2, "tool": "get_order", "result": {"order_id": 4121, "shop": "ТехноДвор", "amount": 24990, "purchase_date": "2026-08-14", "status": "cancelled", "status_ru": "отменён магазином", "cancel_confirmed_date": "2026-08-17", "refund_created": false, "card_last4": "5056"}}
+{"ts": "2026-11-11T20:34:50", "event": "llm_call", "model": "qwen2.5:14b", "url": "http://127.0.0.1:11434/v1", "messages": 6}
+{"ts": "2026-11-11T20:35:06", "event": "api_call", "method": "POST", "path": "/v1/chat/completions", "params": {}, "status": 200, "attempt": 1, "took": 16.26}
+{"ts": "2026-11-11T20:35:06", "event": "thought", "step": 3, "tool": "business_days_after", "text": "После отмены возврат должен прийти через 5 рабочих дней"}
+{"ts": "2026-11-11T20:35:06", "event": "tool_guardrail", "step": 3, "tool": "business_days_after", "status": "allow", "reason": "действие разрешено", "arguments": {"days": 5, "start_date": "2026-08-17"}}
+{"ts": "2026-11-11T20:35:06", "event": "api_call", "method": "GET", "path": "/20260818", "params": {}, "status": 200, "attempt": 1, "took": 0.28}
+{"ts": "2026-11-11T20:35:06", "event": "api_call", "method": "GET", "path": "/20260819", "params": {}, "status": 200, "attempt": 1, "took": 0.26}
+{"ts": "2026-11-11T20:35:07", "event": "api_call", "method": "GET", "path": "/20260820", "params": {}, "status": 200, "attempt": 1, "took": 0.27}
+{"ts": "2026-11-11T20:35:07", "event": "api_call", "method": "GET", "path": "/20260821", "params": {}, "status": 200, "attempt": 1, "took": 0.27}
+{"ts": "2026-11-11T20:35:07", "event": "api_call", "method": "GET", "path": "/20260824", "params": {}, "status": 200, "attempt": 1, "took": 0.28}
+{"ts": "2026-11-11T20:35:07", "event": "observation", "step": 3, "tool": "business_days_after", "result": {"date": "2026-08-24", "date_ru": "24 августа 2026", "start_date": "2026-08-17", "business_days": 5}}
+{"ts": "2026-11-11T20:35:07", "event": "llm_call", "model": "qwen2.5:14b", "url": "http://127.0.0.1:11434/v1", "messages": 8}
+{"ts": "2026-11-11T20:35:25", "event": "api_call", "method": "POST", "path": "/v1/chat/completions", "params": {}, "status": 200, "attempt": 1, "took": 18.06}
+{"ts": "2026-11-11T20:35:25", "event": "answer", "decision": "answer", "text": "По заказу 4121 отмена подтверждена 2026-08-17. Крайний срок возврата: 24 августа 2026 (2026-08-24)."}
